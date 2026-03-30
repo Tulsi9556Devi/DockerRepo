@@ -6,7 +6,7 @@ stage('1. Checkout')
 { 
 git 'https://github.com/Tulsi9556Devi/DockerRepo.git'
 }
-
+}
 stage('2. Build Image')
 {
 steps
@@ -30,4 +30,4 @@ bat 'docker run -d -p 8000:80 --name mycont myweb'
 }
 }
 }
-}
+
