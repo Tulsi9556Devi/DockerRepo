@@ -1,0 +1,11 @@
+pipeline
+{
+    agent any
+    stages('Checkout')
+    {
+        steps
+        {
+            git url:'https://gitlab.siescoms.in/mca25018/mynewproject.git',branch:'main'
+        }
+    }
+}
