@@ -1,8 +1,7 @@
 pipeline
 {
     agent any
-stages
-    {    
+stages{    
 stage('1. Checkout')
 { 
 git 'https://github.com/Tulsi9556Devi/DockerRepo.git'
