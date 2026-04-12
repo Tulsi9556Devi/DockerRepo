@@ -5,14 +5,14 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker build -t jenkins-node-app .'
+                bat 'docker build -t jenkins-node-app .'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'docker rm -f jenkins-container || true'
-                sh 'docker run -d -p 4000:3000 --name jenkins-container jenkins-node-app'
+                bat 'docker rm -f jenkins-container || exit 0'
+                bat 'docker run -d -p 4000:3000 --name jenkins-container jenkins-node-app'
             }
         }
     }
